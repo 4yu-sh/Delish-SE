@@ -1,0 +1,101 @@
+[
+    {
+        "_id":1,
+        "name": "Tomato",
+        "image": "img/urls/here",
+        "type": "Vegetable",
+        "price": "NRS 550",
+        "unit": "/Kg", 
+        "location": "Someplace",
+        "Seller": "Ram",
+        "soldQuant": 100
+    },
+    {
+        "_id":1,
+        "name": "Tomato",
+        "image": "img/urls/here",
+        "type": "Vegetable",
+        "price": "NRS 250",
+        "unit": "/Kg", 
+        "location": "Someplace",
+        "Seller": "Ram",
+        "soldQuant": 500
+    },
+    {
+        "_id":1,
+        "name": "Tomato",
+        "image": "img/urls/here",
+        "type": "Vegetable",
+        "price": "NRS 850",
+        "unit": "/Kg", 
+        "location": "Someplace",
+        "Seller": "Ram",
+        "soldQuant": 300
+    },
+    {
+        "_id":1,
+        "name": "Tomato",
+        "image": "img/urls/here",
+        "type": "Vegetable",
+        "price": "NRS 750",
+        "unit": "/Kg", 
+        "location": "Someplace",
+        "Seller": "Ram",
+        "soldQuant": 400
+    },
+    {
+        "_id":1,
+        "name": "Tomato",
+        "image": "img/urls/here",
+        "type": "Vegetable",
+        "price": "NRS 950",
+        "unit": "/Kg", 
+        "location": "Someplace",
+        "Seller": "Ram",
+        "soldQuant": 400 
+    },
+    {
+        "_id":1,
+        "name": "Tomato",
+        "image": "img/urls/here",
+        "type": "Vegetable",
+        "price": "NRS 450",
+        "unit": "/Kg", 
+        "location": "Someplace",
+        "Seller": "Ram",
+        "soldQuant": 600
+    },
+    {
+        "_id":1,
+        "name": "Tomato",
+        "image": "img/urls/here",
+        "type": "Vegetable",
+        "price": "NRS 650",
+        "unit": "/Kg", 
+        "location": "Someplace",
+        "Seller": "Ram",
+        "soldQuant": 120
+    },
+    {
+        "_id":1,
+        "name": "Tomato",
+        "image": "img/urls/here",
+        "type": "Vegetable",
+        "price": "NRS 250",
+        "unit": "/Kg", 
+        "location": "Someplace",
+        "Seller": "Ram",
+        "soldQuant": 340
+    },
+    {
+        "_id":1,
+        "name": "Tomato",
+        "image": "img/urls/here",
+        "type": "Vegetable",
+        "price": "NRS 250",
+        "unit": "/Kg", 
+        "location": "Someplace",
+        "Seller": "Ram",
+        "soldQuant": 650
+    }
+]
