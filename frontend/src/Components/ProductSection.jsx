@@ -11,11 +11,11 @@ const ProductSection = ({ products }) => {
             <img
               src={products.imageSrc}
               alt={products.imageAlt}
-              className="h-full w-full object-cover object-center group-hover:opacity-75"
+              className="h-full w-full object-cover object-center group-hover:opacity-75 border-2 border-double border-gray-500 rounded-lg transition duration-300 ease-in-out"
             />
           </div>
           <div className="flex place-content-between">
-            <h3 className="mt-4 text-base text-gray-700 font-primary h-[1.5em]  text-ellipsis overflow-hidden whitespace-nowrap">
+            <h3 className="mt-4 text-base w-1/2 text-gray-700 font-primary h-[1.5em]  text-ellipsis overflow-hidden whitespace-nowrap ">
               {products.name}
             </h3>
             <h4 className="mt-4    text-right text-xs font-medium text-gray-900 font-secondary">

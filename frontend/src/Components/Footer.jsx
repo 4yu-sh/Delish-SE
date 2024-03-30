@@ -6,7 +6,7 @@ import Sociallinks from "./Sociallinks";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <div className="bg-grad">
+    <div className="bg-grad  w-full z-30 block">
       <Delishinfo />
       <Footerquote />
       <Sociallinks />

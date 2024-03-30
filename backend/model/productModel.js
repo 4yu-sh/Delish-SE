@@ -24,6 +24,7 @@ const productSchema = new mongoose.Schema(
     },
     name: { type: String, required: true },
     imageSrc: { type: String, required: true },
+    imageAlt: { type: String, required: true },
     seller: { type: String, required: true },
     category: { type: String, required: true },
     description: { type: String, required: true },
@@ -35,8 +36,9 @@ const productSchema = new mongoose.Schema(
       required: true,
     },
     reviews: [reviewSchema],
-    harvestDate: {
+    dateHarvested: {
       type: Date,
+      required: true,
     },
     expiresAt: {
       type: Date,
