@@ -19,6 +19,14 @@ const users = [
     password: bcrypt.hashSync("123456", 10),
     isAdmin: false,
   },
+
+  {
+    name: "Super Admin",
+    email: "super@admin.com",
+    password: bcrypt.hashSync("123456", 10),
+    isAdmin: true,
+    isSuperAdmin: true,
+  },
 ];
 
 export default users;

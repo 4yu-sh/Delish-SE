@@ -3,13 +3,21 @@ import ProductSection from "../Components/ProductSection";
 import { useGetProductsQuery } from "../slices/productsApiSlice";
 import Loader from "../Components/Loader";
 import Message from "../Components/Message";
+import { Link, useParams } from "react-router-dom";
 
 const HomeScreen = () => {
-  const { data: products, isLoading, error } = useGetProductsQuery();
+  const { keyword } = useParams();
+
+  const { data: products, isLoading, error } = useGetProductsQuery({ keyword });
 
   return (
     <>
       <div className="">
+        {/* {keyword && (
+          <Link to="/" className="text-amber-500 mt-20">
+            Go Back
+          </Link>
+        )} */}
         {isLoading ? (
           <Loader />
         ) : error ? (

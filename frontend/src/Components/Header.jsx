@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useLogoutMutation } from "../slices/usersApiSlice";
 import { logout } from "../slices/authSlice";
+import Searchbox from "./Searchbox";
 
 const Header = () => {
   const [isSticky, setSticky] = useState(false);
@@ -133,7 +134,7 @@ const Header = () => {
               </ul>
             </div>
             <Link to="/">
-              <img src={nameLogo} />
+              <img src={nameLogo} alt="Delish Logo" />
             </Link>
           </div>
           <div className="navbar-center hidden lg:flex">
@@ -142,11 +143,7 @@ const Header = () => {
           <div className="navbar-end">
             <div className="flex gap-2">
               <div className="form-control">
-                <input
-                  type="text"
-                  placeholder="Search"
-                  className="input input-bordered w-24 md:w-auto"
-                />
+                <Searchbox />
               </div>
 
               <div className="flex-none">
