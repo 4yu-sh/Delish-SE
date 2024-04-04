@@ -22,4 +22,82 @@ const getProductById = asyncHandler(async (req, res) => {
   }
 });
 
-export { getProdcuts, getProductById };
+//@desc   Create a product
+//@route  POST /api/products
+//@access Private/Admin
+const createProduct = asyncHandler(async (req, res) => {
+  const product = new Product({
+    name: "New PRODUCT",
+    href: "/somelinkto-prdct",
+    price: "35",
+    imageSrc: "https://th.bing.com/th/id/OIG1.3nrnejTi65yn4RZA951q?pid=ImgGn",
+    imageAlt:
+      "Olive drab green insulated bottle with flared screw lid and flat top.",
+    location: "Kathmandu",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+    seller: "Good Seller",
+    category: "Vegetables",
+    countInStock: "100",
+    unit: "kg",
+    freshness: 2,
+    dateHarvested: "2021-09-01",
+    expiresAt: "2021-09-01",
+  });
+
+  const createdProduct = await product.save();
+  res.status(201).json(createdProduct);
+});
+
+// @desc    Update a product
+// @route   PUT /api/products/:id
+// @access  Private/Admin
+const updateProduct = asyncHandler(async (req, res) => {
+  const { name, price, description, image, seller, category, countInStock } =
+    req.body;
+
+  const product = await Product.findById(req.params.id);
+
+  if (product) {
+    product.name = name;
+    product.price = price;
+    product.description = description;
+    product.imageSrc = image;
+    product.seller = seller;
+    product.category = category;
+    product.countInStock = countInStock;
+    product.unit = unit;
+    product.freshness = freshness;
+    product.dateHarvested = dateHarvested;
+    product.expiresAt = expiresAt;
+
+    const updatedProduct = await product.save();
+    res.json(updatedProduct);
+  } else {
+    res.status(404);
+    throw new Error("Product not found");
+  }
+});
+
+//@desc  Delete a product
+//@route DELETE /api/products/:id
+//@access Private/Admin
+const deleteProduct = asyncHandler(async (req, res) => {
+  const product = await Product.findById(req.params.id);
+
+  if (product) {
+    await Product.deleteOne({ _id: product._id });
+    res.status(200).json({ message: "Product removed" });
+  } else {
+    res.status(404);
+    throw new Error("Product not found");
+  }
+});
+
+export {
+  getProdcuts,
+  getProductById,
+  createProduct,
+  updateProduct,
+  deleteProduct,
+};

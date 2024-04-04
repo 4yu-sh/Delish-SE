@@ -167,7 +167,7 @@ const PlaceOrderScreen = () => {
             <div className="my-4">
               <button
                 type="button"
-                className="btn btn-ghost font-primary "
+                className="btn bg-amber-500 font-primary "
                 disabled={cart.cartItems.length === 0}
                 onClick={placeOrderHandler}
               >

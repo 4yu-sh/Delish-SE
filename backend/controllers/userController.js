@@ -1,11 +1,10 @@
 import asyncHandler from "../middleware/asyncHandler.js";
 import User from "../model/userModel.js";
 
-import jwt from "jsonwebtoken";
 import generateToken from "../utils/generateToken.js";
 
 // @desc    Auth user & get token
-// @route   GET /api/user/login
+// @route   GET /api/user/auth
 // @access  Public
 const authUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;

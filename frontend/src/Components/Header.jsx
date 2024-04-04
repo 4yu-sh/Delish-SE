@@ -225,9 +225,28 @@ const Header = () => {
                       <span className="badge">2</span>
                     </Link>
                   </li>
-                  <li>
-                    <Link to="settings">Settings</Link>
-                  </li>
+                  {userInfo.isAdmin && (
+                    <>
+                      <li>
+                        <Link
+                          to="/admin/productlist"
+                          className="justify-between"
+                        >
+                          Products
+                        </Link>
+                      </li>
+                      {/* <li>
+                        <Link to="/admin/userlist" className="justify-between">
+                          Users
+                        </Link>
+                      </li> */}
+                      <li>
+                        <Link to="/admin/orderlist" className="justify-between">
+                          Orders
+                        </Link>
+                      </li>
+                    </>
+                  )}
                   <li>
                     <div onClick={logoutHandler}>Logout</div>
                   </li>
