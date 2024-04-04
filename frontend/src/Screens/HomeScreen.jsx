@@ -13,11 +13,11 @@ const HomeScreen = () => {
   return (
     <>
       <div className="">
-        {/* {keyword && (
+        {keyword && (
           <Link to="/" className="text-amber-500 mt-20">
             Go Back
           </Link>
-        )} */}
+        )}
         {isLoading ? (
           <Loader />
         ) : error ? (

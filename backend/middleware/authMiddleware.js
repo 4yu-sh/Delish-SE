@@ -33,4 +33,13 @@ const admin = (req, res, next) => {
   }
 };
 
-export { protect, admin };
+//SuperAdmin middleware
+const superAdmin = (req, res, next) => {
+  if (req.user && req.user.isAdmin && req.user.isSuperAdmin) {
+    next();
+  } else {
+    throw new Error("Not authorized as Super Admin");
+  }
+};
+
+export { protect, admin, superAdmin };

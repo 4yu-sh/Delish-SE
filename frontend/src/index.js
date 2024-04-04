@@ -26,6 +26,9 @@ import AdminRoute from "./Components/AdminRoute";
 import AllOrdersScreen from "./Screens/Admin/AllOrdersScreen";
 import ProductListScreen from "./Screens/Admin/ProductListScreen";
 import ProductEditScreen from "./Screens/Admin/ProductEditScreen";
+import SuperAdminRoute from "./Components/SuperAdminRoute";
+import UserListScreen from "./Screens/SuperAdmin/UserListScreen";
+import UserEditScreen from "./Screens/SuperAdmin/UserEditScreen";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -49,6 +52,14 @@ const router = createBrowserRouter(
         <Route path="/admin/orderlist" element={<AllOrdersScreen />} />
         <Route path="/admin/productlist" element={<ProductListScreen />} />
         <Route path="/admin/product/:id/edit" element={<ProductEditScreen />} />
+      </Route>
+
+      <Route path="" elemenet={<SuperAdminRoute />}>
+        <Route path="/superadmin/userlist" element={<UserListScreen />} />
+        <Route
+          path="/superadmin/userlist/:id/edit"
+          element={<UserEditScreen />}
+        />
       </Route>
     </Route>
   )

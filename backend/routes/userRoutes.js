@@ -13,9 +13,9 @@ import {
   updateUser,
 } from "../controllers/userController.js";
 
-import { protect, admin } from "../middleware/authMiddleware.js";
+import { protect, admin, superAdmin } from "../middleware/authMiddleware.js";
 
-router.route("/").post(registerUser).get(protect, admin, getUsers);
+router.route("/").post(registerUser).get(protect, superAdmin, getUsers);
 router.post("/logout", logoutUser);
 router.post("/auth", authUser);
 router
@@ -24,8 +24,8 @@ router
   .put(protect, updateUserProfile);
 router
   .route("/:id")
-  .get(protect, admin, getUsersById)
-  .delete(protect, admin, deleteUser)
-  .put(protect, admin, updateUser);
+  .get(protect, superAdmin, getUsersById)
+  .delete(protect, superAdmin, deleteUser)
+  .put(protect, superAdmin, updateUser);
 
 export default router;
